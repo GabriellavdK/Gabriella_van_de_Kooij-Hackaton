@@ -1,0 +1,403 @@
+/* General content 
+Alle overige CSS per pagina vind je na de footer content*/
+
+body {
+    background-color: rgb(188, 228, 228);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        " header "
+        " nav "
+        " main "
+        " footer "
+}
+
+/* Header content */
+
+header {
+    grid-area: header;
+    background-color: teal;
+    font-family: 'Bowlby One', cursive;
+    color: whitesmoke;
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 150;
+}
+
+/* Header menu content */
+
+.menu {
+    grid-area: nav;
+    font-family: 'Bowlby One', cursive;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px;
+}
+
+.menu a {
+    color: teal;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.menu a:hover {
+    color: whitesmoke;
+}
+
+/* Buttons */
+
+button {
+    display: block;
+    border-radius: 5px;
+    border: none;
+    background-color: teal;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: auto auto 0;
+    border: 3px whitesmoke solid;
+}
+
+button a,
+button span {
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button a:after,
+button span:after {
+    content: '  \00bb';
+    align-content: flex-end;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover a,
+button:hover span {
+    padding-right: 5px;
+}
+
+button:hover a:after,
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Iframe code */
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer content */
+
+footer {
+    grid-area: footer;
+    background-color: teal;
+    font-family: 'Open Sans', sans-serif;
+    color: whitesmoke;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 3px dashed whitesmoke;
+}
+
+.footer nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    color: whitesmoke;
+    text-decoration: none;
+    border: none;
+}
+
+.footer nav a:hover {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(188, 228, 228);
+}
+
+.footer section {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer img {
+    width: 60px;
+    padding: 10px;
+    margin: auto;
+}
+
+/* Content homepagina */
+
+main {
+    grid-area: main;
+    display: grid;
+    gap: 20px 10px;
+    grid-template-columns: 10px 1fr 1fr 1fr 10px;
+    grid-template-rows: auto repeat(3, 1fr) auto;
+    grid-template-areas:
+        " . intro intro intro . "
+        " . over over over . "
+        " . gedrag gedrag gedrag . "
+        " . spelen spelen spelen . "
+        " . vragen vragen vragen . ";
+}
+
+main h1 {
+    font-weight: 600;
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+}
+
+main section {
+    padding: 5%;
+    width: 90%;
+}
+
+.intro {
+    grid-area: intro;
+}
+
+.over {
+    grid-area: over;
+    border: 2px solid teal;
+}
+
+.gedrag {
+    grid-area: gedrag;
+    border: 2px solid teal;
+}
+
+.spelen {
+    grid-area: spelen;
+    border: 2px solid teal;
+}
+
+.vragen {
+    grid-area: vragen;
+    justify-content: center;
+    text-align: center;
+    padding: 2% auto 2.5%;
+    background-color: whitesmoke;
+    border: 5px dashed teal;
+    border-radius: 10px;
+    height: auto;
+    width: 80%;
+    margin: auto;
+}
+
+/* Content contactpagina */
+
+main.contact {
+    grid-area: main;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        " afbeelding afbeelding afbeelding "
+        " . intro . "
+        " . contactformulier . ";
+}
+
+.afbeelding {
+    grid-area: afbeelding;
+    padding: 0;
+    width: 100%;
+}
+
+.contactformulier {
+    grid-area: contactformulier;
+    padding: 5%;
+    text-align: left;
+    background-color: whitesmoke;
+    border: 5px dashed teal;
+    border-radius: 10px;
+    margin: auto;
+    max-width: 300px;
+}
+
+label {
+    display: block;
+}
+
+.toestemming {
+    word-wrap: normal;
+}
+
+/* Content Inhoud pagina's */
+
+main.inhoud {
+    grid-area: main;
+    display: grid;
+    gap: 20px 10px;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+        " afbeelding afbeelding afbeelding "
+        " . intro . "
+        " . s1 . "
+        " . s2 . "
+        " . s3 . "
+        " . vragen . "
+}
+
+.s1 {
+    grid-area: s1;
+    border: 2px solid teal;
+}
+
+.s2 {
+    grid-area: s2;
+    border: 2px solid teal;
+}
+
+.s3 {
+    grid-area: s3;
+    border: 2px solid teal;
+}
+
+/* Media queries */
+
+@media (min-width: 768px) {
+    main section {
+        display: flex;
+        padding: 2%;
+        margin: auto;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .footer nav {
+        align-items: flex-start;
+        padding: 20px;
+        border-bottom: none;
+    }
+
+    .footer section {
+        flex-direction: column;
+    }
+
+    main .intro img,
+    main .over img,
+    main .gedrag img,
+    main .spelen img,
+    main .s1 img,
+    main .s2 img,
+    main .s3 img {
+        width: 50%;
+        height: 100%;
+        align-self: center;
+    }
+
+    .left {
+        padding-left: 20px;
+        margin: auto;
+    }
+
+    .right {
+        padding-right: 20px;
+        margin: auto;
+    }
+
+    .imgright {
+        order: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            " header nav "
+            " main main"
+            " footer footer"
+    }
+
+    nav.menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu a {
+        padding: 0 25px;
+    }
+
+    main .intro img,
+    main .over img,
+    main .gedrag img,
+    main .spelen img,
+    main .s1 img,
+    main .s2 img,
+    main .s3 img {
+        width: 30%;
+    }
+
+    .embed-container {
+        padding-bottom: 34%;
+        max-width: 60%;
+    }
+}

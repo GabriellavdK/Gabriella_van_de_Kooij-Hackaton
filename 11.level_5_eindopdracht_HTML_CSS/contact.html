@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <title>Contact</title>
+</head>
+
+<body class="grid-container">
+
+    <header>
+        <h1>Gino</h1>
+        <p>Mijn Amerikaanse Bulldog</p>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html"> Home </a>
+        <a href="over.html"> Over </a>
+        <a href="gedrag.html"> Gedrag </a>
+        <a href="spelen.html"> Spelen </a>
+        <a href="contact.html"> Contact </a>
+    </nav>
+
+    <main class="contact">
+
+        <section class="afbeelding">
+            <img src="images/Gino duinen graven.jpg" alt="Gino die aan het graven is in de duinen">
+        </section>
+
+        <section class="intro">
+            <div>
+                <h1>Neem contact met mij op!</h1>
+                <p>Wil je een vraag stellen over Amerikaanse Bulldogs? Of heb je een opmerking of aanvulling voor mijn
+                    website? Vul dan hieronder het contactformulier in en ik neem contact met je op!</p>
+            </div>
+        </section>
+
+        <form class="contactformulier" action="Contact" name="contact" method="POST" data-netlify="true">
+            <label for="Naam: ">Naam</label><input type="text" name="Naam: " placeholder="John Doe" required="required">
+            <label for="E-mailadres: ">Jouw e-mailadres</label><input type="email" name="E-mailadres: "
+                placeholder="voorbeeld@outlook.com" required="required">
+            <label for="Vraag/opmerking">Stel hier jouw vraag</label><textarea name="Vraag/opmerking: " cols="25"
+                rows="10" placeholder="Jouw bericht" required="required"></textarea>
+            <label for="toestemming"><input class="toestemming" type="checkbox" name="toestemming"
+                    required="required">Ik ga ermee akkoord
+                dat jullie mijn
+                persoonlijke gegevens gebruiken en bewaren om mijn vraag te kunnen beantwoorden.</label> <br>
+            <button type="submit"><span>Verzenden</span></button>
+        </form>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <nav>
+                <a href="index.html"> Home </a>
+                <a href="over.html"> Over </a>
+                <a href="gedrag.html"> Gedrag </a>
+                <a href="spelen.html"> Spelen </a>
+                <a href="contact.html"> Contact </a>
+            </nav>
+
+            <section>
+                <h1>Je kunt ons ook volgen op de Socials!</h1>
+                <p>
+                    <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook logo"></a>
+                    <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram logo"></a>
+                </p>
+            </section>
+        </div>
+
+        <small>
+            Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Gabriella. All Rights Reserved.
+        </small>
+
+    </footer>
+
+</body>
+
+</html>
